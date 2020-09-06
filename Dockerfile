@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 
 # Create app directory
 WORKDIR /usr/src/app
-
+RUN echo "export NODE_PATH=/usr/lib/node_modules/" >> $HOME/.bashrc
 RUN mkdir $HOME/.ssh
 
 RUN apt-get update -y && apt-get -y install curl gnupg zip build-essential git ca-certificates
