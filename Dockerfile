@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 
 RUN mkdir $HOME/.ssh
 
-RUN apt-get update -y && apt-get -y install curl zip build-essential git ca-certificates
+RUN apt-get update -y && apt-get -y install curl gnupg zip build-essential git ca-certificates
 
 RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt-get install -y nodejs
